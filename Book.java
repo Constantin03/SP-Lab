@@ -4,29 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-	String name;
-	List<String> paragraph= new ArrayList<String>();
-	List<String> table= new ArrayList<String>();
-	List<String> image= new ArrayList<String>();
-	public Book(String name) {
-		this.name = name;
-	}
-	
-	public void createNewParagraph(String x) {
-		this.paragraph.add(x);
-	}
+	 private final String titlulCartii;
+	    private Author autorulCartii;
+	    private List<Chapter> listaCapitole;
 
-	public void createNewImage(String x) {
-		this.image.add(x);
-	}
-	
-	public void createNewTable(String x) {
-		this.table.add(x);
-	}
-	@Override
-	public String toString() {
-		return "Book [name=" + name + ", paragraph=" + paragraph + ", table=" + table + ", image=" + image + "]";
-	}
-	
-	
+	    public Book(String titlulCartii) {
+	        this.titlulCartii = titlulCartii;
+	        this.listaCapitole = new ArrayList<>();
+	    }
+
+	    public void addAuthor(Author autorulCartii) {
+	        this.autorulCartii = autorulCartii;
+	    }
+
+	    public int createChapter(String titlulCapitolului) {
+	        listaCapitole.add(new Chapter(titlulCapitolului));
+	        return listaCapitole.size() - 1;
+	    }
+
+	    public Chapter getChapter(int indexulCapitolului) {
+	        return listaCapitole.get(indexulCapitolului);
+	    }
 }
