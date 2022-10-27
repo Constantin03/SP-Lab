@@ -30,20 +30,22 @@ public class SubChapter implements Element {
     }
 
 	@Override
-	public void add() {
+	public void add(Element element) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void remove() {
+	public void remove(Element element) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void get(int x) {
+	public Element get(int indexulElementului) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
+
+	
 }

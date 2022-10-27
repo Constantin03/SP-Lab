@@ -2,12 +2,19 @@ package mybook;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Image implements Element {
 	 private final String imagineaCapitolului;
 	    private final List<Element> listaImagini;
 
 	    public Image(String imagineaCapitolului) {
+	    	imagineaCapitolului = imagineaCapitolului;
+	    	try {
+	    	TimeUnit.SECONDS.sleep(5);
+	    	} catch (InterruptedException e) {
+	    	e.printStackTrace();
+	    	}
 	        this.imagineaCapitolului = imagineaCapitolului;
 	        this.listaImagini = new ArrayList<>();
 	    }
@@ -32,4 +39,5 @@ public class Image implements Element {
 	    public Element get(int indexulElementului) {
 	        return listaImagini.get(indexulElementului);
 	    }
+
 }
