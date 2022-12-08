@@ -53,6 +53,6 @@ public class Book implements Element {
     }
 
     public void accept(Visitor visitor){
-
+        visitor.visitBook(this);
     }
 }
