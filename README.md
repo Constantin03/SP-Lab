@@ -1,3 +1,3 @@
-# Nota finala: 7
-Nota test: 6
-Nota proiect: 8
+# Nota finala: 8
+Nota test: 7
+Nota proiect: 9
